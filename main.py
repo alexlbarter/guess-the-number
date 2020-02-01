@@ -22,7 +22,7 @@ def main():
         else:
             moves += 1
         if guess == number_to_guess:
-            print("Well done! You guessed the number in {} tries!".format(moves))
+            print("Well done! You guessed the number in {} {}!".format(moves, "try" if moves == 1 else "tries"))
             break
         elif guess < number_to_guess:
             print("Too low")
