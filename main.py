@@ -8,6 +8,7 @@ def main():
         difficulty = input("Enter difficulty: ").strip().lower()
         try:
             number_to_guess = random.randint(1, max_nums[difficulty])
+            break
         except KeyError:
             print("Invalid difficulty")
             continue
@@ -20,7 +21,7 @@ def main():
             continue
         else:
             moves += 1
-        if guess = number_to_guess:
+        if guess == number_to_guess:
             print("Well done! You guessed the number in {} tries!".format(moves))
             break
         elif guess < number_to_guess:
@@ -29,5 +30,4 @@ def main():
             print("Too high")
 
 
-if __name__ == "__main__":
-    main()
+main()
