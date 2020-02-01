@@ -30,4 +30,5 @@ def main():
             print("Too high")
 
 
-main()
+if __name__ == "__main__":
+    main()
