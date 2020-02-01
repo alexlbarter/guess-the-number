@@ -1,5 +1,6 @@
 import random
 
+
 def main():
     max_nums = {"easy": 10,
                 "medium": 50,
