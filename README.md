@@ -1,4 +1,5 @@
 # guess-the-number
-A simple guess the number game, written in Python.
+A simple guess the number game which runs on the command line, written in Python.
 
-Runs on the command line, but GUI is coming soon.
+## Coming soon
+* GUI, using tkinter
