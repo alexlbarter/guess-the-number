@@ -4,12 +4,22 @@ def main():
     max_nums = {"easy": 10,
                 "medium": 50,
                 "hard": 100}
-    difficulty = input("Enter difficulty: ").strip().lower()
-    number_to_guess = random.randint(1, max_nums[difficulty])
     while True:
-        moves = 0
-        guess = int(input("Guess the number: ").strip())
-        moves += 1
+        difficulty = input("Enter difficulty: ").strip().lower()
+        try:
+            number_to_guess = random.randint(1, max_nums[difficulty])
+        except KeyError:
+            print("Invalid difficulty")
+            continue
+    moves = 0
+    while True:
+        try:
+            guess = int(input("Guess the number: ").strip())
+        except ValueError:
+            print("Invalid input")
+            continue
+        else:
+            moves += 1
         if guess = number_to_guess:
             print("Well done! You guessed the number in {} tries!".format(moves))
             break
