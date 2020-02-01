@@ -1,10 +1,26 @@
 import random
 
 
-def main():
+def get_max_num(difficulty):
     max_nums = {"easy": 10,
                 "medium": 50,
                 "hard": 100}
+    try:
+        return max_nums[difficulty]
+    except KeyError:
+        return None
+
+
+def generate_number(max_num):
+    return random.randint(1, max_num)
+
+
+def check_guess(guess, number_to_guess):
+    if guess == number_to_guess:
+        return "correct"
+
+
+def main():
     while True:
         difficulty = input("Enter difficulty: ").strip().lower()
         try:
